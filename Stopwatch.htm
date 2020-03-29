@@ -33,29 +33,21 @@
                 }
 
             }
-            if(seconds < 10){
-                displaySeconds = "0" + seconds.toString();
-            }
-            else{
-                displaySeconds = seconds;
-            }
-
-            if(minutes < 10){
-                displayMinutes = "0" + minutes.toString();
-            }else{
-                displayMinutes = minutes;
-            }
-
-            if(hours < 10){
-                displayHours = "0" + hours.toString()
-            }else{
-                displayHours = hours
-            }
+            displaySeconds = displayTime(seconds);
+            displayMinutes = displayTime(minutes);
+            displayHours = displayTime(hours);
 
             //Display updated time values to user
             document.getElementById("display").innerHTML = displayHours + ":" + displayMinutes + ":" + displaySeconds;
             }
-
+function displayTime(intTime) {
+            if(intTime < 10){
+                return "0" + intTime.toString();
+            }
+            else{
+                return intTime.toString();
+            }
+}
             
             function startStop(){
                 if(status === "stopped"){
