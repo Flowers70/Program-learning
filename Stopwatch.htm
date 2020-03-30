@@ -14,7 +14,7 @@
             let displayMinutes = 0;
             let displayHours = 0;
 
-            let interval = null;
+            let timer = null;
             let status = "stopped";
 
             //Stopwatch function (logic to determine when to increment next value, etc.)
@@ -63,7 +63,7 @@ function displayTime(intTime) {
             }
 
 
-                function clear(){
+                function reSetting(){
                     window.clearInterval(timer);
                     seconds = 0;
                     minutes = 0;
@@ -100,7 +100,7 @@ function displayTime(intTime) {
      <div class="centered">
         <div id="display">00:00:00</div>
         <div class="buttons">
-            <button id="startStop" onclick="startStop()">Start</button> <button id="reset" onclick="clear()">Reset</button>
+            <button id="startStop" onclick="startStop()">Start</button> <button id="reset" onclick="reSetting()">Reset</button>
         </div>
     </div>
         
